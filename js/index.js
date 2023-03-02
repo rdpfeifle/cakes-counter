@@ -4,12 +4,13 @@
 // change the count in the HTML to reflect the new count
 
 let countEl = document.getElementById("count");
+let saveEl = document.getElementById("save-el");
 
 let count = 0;
 
 function increment() {
   count += 1;
-  countEl.innerText = count;
+  countEl.textContent = count;
   console.log(count);
 }
 
@@ -20,7 +21,12 @@ btn.addEventListener("click", increment);
 let saveBtn = document.getElementById("save-btn");
 
 function save() {
-  console.log(count);
+  let countSeparator = ` ${count} - `;
+  saveEl.textContent += countSeparator;
+
+  // Reset countEl back to 0 after saving the entries
+  countEl.textContent = 0;
+  count = 0;
 }
 
 saveBtn.addEventListener("click", save);
