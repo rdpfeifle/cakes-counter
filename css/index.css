@@ -1,10 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
 body {
-  background-image: url("../images/station.jpg ");
+  background-image: url("../images/cake.jpg ");
   background-size: cover;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-repeat: no-repeat;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   text-align: center;
+  color: #302f2f;
+}
+
+.container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  height: 250px;
 }
 
 h1 {
@@ -31,9 +46,27 @@ button {
 }
 
 #increment-btn {
-  background: darkred;
+  background: rgb(246, 148, 141);
+}
+
+#increment-btn:hover {
+  background: rgb(245, 121, 112);
 }
 
 #save-btn {
-  background: darkgreen;
+  background: #d99331;
+}
+
+#save-btn:hover {
+  background: #dc8101;
+}
+
+#save-el {
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background: center / 100% auto no-repeat url("../images/cake.jpg");
+  }
 }
